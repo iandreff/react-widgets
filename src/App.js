@@ -1,8 +1,8 @@
 import React from 'react';
-import Accordion from './Component/Accordion';
+ /*import Accordion from './Component/Accordion'; */
 import Search from './Component/Search';
 
-const items = [
+/* const items = [
   {
       title:'what is react',
       content:'papapa papa'
@@ -15,7 +15,7 @@ const items = [
       title:'wnat is popopo',
       content:'papapa pepepea'
   }
-];
+]; */
 
 export default function App() {
   return (
