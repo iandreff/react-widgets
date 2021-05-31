@@ -20,6 +20,7 @@ const Accordion = ({items}) => {
                     {item.title}
                 </div>
                 <div className={`content ${active}`}>
+                    {item.content}
                 </div>
             </React.Fragment>
         );

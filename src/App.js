@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
- /*import Accordion from './Component/Accordion'; */
-// import Search from './Component/Search';
+import Accordion from './Component/Accordion';
+import Search from './Component/Search';
 import Dropdown from "./Component/DropDown";
 import Translate from "./Component/Translate";
+import Route from "./Component/Route";
 
-/* const items = [
+const items = [
   {
       title:'what is react',
       content:'papapa papa'
@@ -17,7 +18,7 @@ import Translate from "./Component/Translate";
       title:'wnat is popopo',
       content:'papapa pepepea'
   }
-]; */
+];
 
 const options = [
   {
@@ -34,11 +35,28 @@ const options = [
   }
 ];
 
-export default function App() {
 
+export default function App() {
+  const [selected, setSelected] =useState(options[0]);  
   return (
     <div className="ui container">
-      <Translate />
+      <Route path="/">
+        <Accordion items={items}/>
+      </Route>
+      <Route path="/list">
+        <Search/>
+      </Route>
+      <Route path="/dropdown">
+        <Dropdown 
+          options={options}
+          label="Select a color"
+          selected={selected}
+          onSelectedChange={setSelected}
+          />
+      </Route>
+      <Route path="/translate">
+        <Translate/>
+      </Route>
     </div>
   );
 }
