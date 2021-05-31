@@ -4,6 +4,7 @@ import Search from './Component/Search';
 import Dropdown from "./Component/DropDown";
 import Translate from "./Component/Translate";
 import Route from "./Component/Route";
+import Header from "./Component/Header";
 
 const items = [
   {
@@ -40,6 +41,7 @@ export default function App() {
   const [selected, setSelected] =useState(options[0]);  
   return (
     <div className="ui container">
+      <Header/>
       <Route path="/">
         <Accordion items={items}/>
       </Route>
