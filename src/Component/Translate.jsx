@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import DropDown from './DropDown';
+import Convert from './Convert';
 
-const ApiKey ="AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM";
+
+
 const options = [
     {
         label:'Afrikaans',
@@ -34,6 +36,12 @@ const Translate = () => {
                 selected={language}
                 onSelectedChange={setLanguage}
                 options={options}
+            />
+            <hr />
+            <h3 className="ui header">Output</h3>
+            <Convert
+                text={text}
+                language={language}
             />
         </div>
     );
